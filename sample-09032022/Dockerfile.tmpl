@@ -1,0 +1,11 @@
+FROM {{ env "DOCKER_REGISTRY" }}/cobalt/alpine310-jre8:{{ env "BASE_IMAGE_VERSION" }}
+
+ADD target/sample-service-ying-0.1.0.jar app.jar
+
+ENV HEALTH_CHECK_URL=http://localhost:8080/greeting
+
+
+ENV APP_UUID "01gc254e4n55xgvw8m2pvp4r0y"
+ENV APP_NAME sample-service-ying
+
+

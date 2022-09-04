@@ -1,0 +1,14 @@
+{
+    "consul": "{{.NOMAD_IP_cobalt}}:8500",
+    "stopTimeout": 5,
+    "services": [{
+        "name": "{{.COBALT_TEST_SERVICE_NAME}}",
+        "port": 8080,
+        "health": "/usr/bin/curl --fail -s -o /dev/null http://localhost:8080/v1/message",
+        "poll": 10,
+        "ttl": 25,
+        "interfaces": [
+            "eth0"
+        ]
+    }]
+}

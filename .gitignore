@@ -1,0 +1,7 @@
+.vagrant/*
+*/target/*
+*.iml
+.idea/*
+sample-09032022/.idea/*
+test/*/target/*
+.DS_Store
